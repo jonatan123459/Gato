@@ -1,0 +1,94 @@
+ public void SeGano() {
+        boolean gana = false;
+        {
+            if (posicion1.getText().equals(posicion2.getText()) && posicion1.getText().equals(posicion3.getText())) {
+                ganador();
+                // es verdadero que hubo un ganador
+                gana = true;
+            } else if (posicion1.getText().equals(posicion5.getText()) && posicion1.getText().equals(posicion9.getText())) {
+                ganador();
+                // es verdadero que hubo un ganador
+                gana = true;
+            }
+                else if (posicion3.getText().equals(posicion5.getText()) && posicion3.getText().equals(posicion7.getText())) {
+                    ganador();
+                    // es verdadero que hubo un ganador
+                    gana = true;
+                } else if (posicion4.getText().equals(posicion5.getText()) && posicion4.getText().equals(posicion6.getText())) {
+                    ganador();
+                    // es verdadero que hubo un ganador
+                    gana = true;
+
+                } else if (posicion7.getText().equals(posicion8.getText()) && posicion7.getText().equals(posicion9)) {
+                    ganador();
+                    // es verdadero que hubo un ganador
+                    gana = true;
+
+                    pantalla.setText("gano");
+                } else if (posicion1.getText().equals(posicion4.getText()) && posicion1.getText().equals(posicion7.getText())) {
+                    ganador();
+                    // es verdadero que hubo un ganador
+                    gana = true;
+
+                } else if (posicion2.getText().equals(posicion5.getText()) && posicion2.getText().equals(posicion8.getText())) {
+                    ganador();
+                    // es verdadero que hubo un ganador
+                    gana = true;
+
+                } else if (posicion3.getText().equals(posicion6.getText()) && posicion3.getText().equals(posicion9.getText())) {
+                    ganador();
+                    // es verdadero que hubo un ganador
+                    gana = true;
+
+                }
+                if (turno) {
+                    turno = false;
+                } else {
+                    turno = true;
+                }
+                if (empate == 9 && gana == false) {
+                    pantalla.setText("Hay empate!!!");
+
+                    // empiesa la nueva partida el jugador contraio al que la termino
+                    if (turno) {
+                        turno = false;
+                    } else {
+                        turno = true;
+                    }
+
+                    // pregunto si quieren jugar otra partida
+                    int seleccion = JOptionPane.showConfirmDialog(null, "quieren jugar otra partida", "mensaje", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null);
+                    if (seleccion == 0) {
+                        LimpiarTablero();
+                    } else {
+                        // si no hubo empate el el resultado final y el turno es verdadero
+                        if (turno && !validarEmpate()) {
+                            // muestro el resultado final y el ganador es el jugador1
+                            JOptionPane.showMessageDialog(null, "Resultado final."
+                                    + "\n" + jugador1 + ": " + con1.getText()
+                                    + "\n" + jugador2 + ": " + con2.getText()
+                                    + "\nFelicitaciones!! " + jugador1
+                                    + "\neres el ganador");
+                        } else {
+                            // si no hubo empate el el resultado final y el turno falso
+                            if (!turno && !validarEmpate()) {
+                                // muestro el resultado final y el ganador es el jugador2
+                                JOptionPane.showMessageDialog(null, "Resultado final."
+                                        + "\n" + jugador1 + ": " + con1.getText()
+                                        + "\n" + jugador2 + ": " + con2.getText()
+                                        + "\nFelicitaciones !! " + jugador2
+                                        + "\neres el ganador");
+                            } else {
+                                //en otro caso resultado final empate
+                                JOptionPane.showMessageDialog(null, "Resultado final."
+                                        + "\n" + jugador1 + ": " + con1.getText()
+                                        + "\n" + jugador2 + ": " + con2.getText()
+                                        + "\nEmpate !! ");
+                            }
+                        }
+                        // intruciion que cierra aplicaciones
+                        System.exit(0);
+                    }
+                }
+            }
+        }
