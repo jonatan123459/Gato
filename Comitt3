@@ -1,0 +1,85 @@
+   private void juegoanterior1ActionPerformed(java.awt.event.ActionEvent evt) {                                               
+
+        posicion1.setText(tamano[0]);
+        if (posicion1.getText().equals("A")) {
+            posicion1.setForeground(Color.green);
+        } else if (posicion1.getText().equals("X")) {
+            posicion1.setForeground(Color.red);
+        } else if (posicion1.getText().equals("O")) {
+            posicion1.setForeground(Color.blue);
+
+        }
+        posicion2.setText(tamano[1]);
+        if (posicion2.getText().equals("B")) {
+            posicion2.setForeground(Color.green);
+        } else if (posicion2.getText().equals("X")) {
+            posicion2.setForeground(Color.red);
+        } else if (posicion2.getText().equals("O")) {
+            posicion2.setForeground(Color.blue);
+        }
+        posicion3.setText(tamano[2]);
+        if (posicion3.getText().equals("C")) {
+            posicion3.setForeground(Color.green);
+        } else if (posicion3.getText().equals("X")) {
+            posicion3.setForeground(Color.red);
+        } else if (posicion3.getText().equals("O")) {
+            posicion3.setForeground(Color.blue);
+        }
+        posicion4.setText(tamano[3]);
+        if (posicion4.getText().equals("D")) {
+            posicion4.setForeground(Color.green);
+        } else if (posicion4.getText().equals("X")) {
+            posicion4.setForeground(Color.red);
+        } else if (posicion4.getText().equals("O")) {
+            posicion4.setForeground(Color.blue);
+        }
+        posicion5.setText(tamano[4]);
+        if (posicion5.getText().equals("F")) {
+            posicion5.setForeground(Color.green);
+        } else if (posicion5.getText().equals("X")) {
+            posicion5.setForeground(Color.red);
+        } else if (posicion5.getText().equals("O")) {
+            posicion5.setForeground(Color.blue);
+        }
+        posicion6.setText(tamano[5]);
+        if (posicion6.getText().equals("T")) {
+            posicion6.setForeground(Color.green);
+        } else if (posicion6.getText().equals("X")) {
+            posicion6.setForeground(Color.red);
+        } else if (posicion6.getText().equals("O")) {
+            posicion6.setForeground(Color.blue);
+        }
+        posicion7.setText(tamano[6]);
+        if (posicion7.getText().equals("R")) {
+            posicion7.setForeground(Color.green);
+        } else if (posicion7.getText().equals("X")) {
+            posicion7.setForeground(Color.red);
+        } else if (posicion7.getText().equals("O")) {
+            posicion7.setForeground(Color.blue);
+        }
+        posicion8.setText(tamano[7]);
+        if (posicion8.getText().equals("S")) {
+            posicion8.setForeground(Color.green);
+        } else if (posicion8.getText().equals("X")) {
+            posicion8.setForeground(Color.red);
+        } else if (posicion8.getText().equals("O")) {
+            posicion8.setForeground(Color.blue);
+
+        }
+
+        posicion9.setText(tamano[8]);
+        if (posicion9.getText().equals("W")) {
+            posicion9.setForeground(Color.green);
+        } else if (posicion9.getText().equals("X")) {
+            posicion9.setForeground(Color.red);
+        } else if (posicion9.getText().equals("O")) {
+            posicion9.setForeground(Color.blue);
+        }
+        turnos.setText(tamano[9]);
+        juga.setText(tamano[11]);
+        juga.setForeground(Color.red);
+        juga2.setText(tamano[12]);
+        juga2.setForeground(Color.blue);
+
+
+    }                                              
