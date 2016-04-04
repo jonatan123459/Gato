@@ -1,0 +1,49 @@
+      int seleccion = JOptionPane.showConfirmDialog(null, "quieren jugar otra partida", "mensaje", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null);
+                if (seleccion == 0) {
+                    LimpiarTablero();
+                } else {
+                    // si no hubo empate el el resultado final y el turno es verdadero
+                    if (turno && !validarEmpate()) {
+                        // muestro el resultado final y el ganador es el jugador1
+                        JOptionPane.showMessageDialog(null, "Resultado final."
+                                + "\n" + jugador1 + ": " + con1.getText()
+                                + "\n" + jugador2 + ": " + con2.getText()
+                                + "\nFelicitaciones!! " + jugador1
+                                + "\neres el ganador");
+                    } else {
+                        // si no hubo empate el el resultado final y el turno falso
+                        if (!turno && !validarEmpate()) {
+                            // muestro el resultado final y el ganador es el jugador2
+                            JOptionPane.showMessageDialog(null, "Resultado final."
+                                    + "\n" + jugador1 + ": " + con1.getText()
+                                    + "\n" + jugador2 + ": " + con2.getText()
+                                    + "\nFelicitaciones !! " + jugador2
+                                    + "\neres el ganador");
+                        } else {
+                            //en otro caso resultado final empate
+                            JOptionPane.showMessageDialog(null, "Resultado final."
+                                    + "\n" + jugador1 + ": " + con1.getText()
+                                    + "\n" + jugador2 + ": " + con2.getText()
+                                    + "\nEmpate !! ");
+                        }
+                    }
+                    // intruciion que cierra aplicaciones
+                    System.exit(0);
+                }
+            }
+        }
+    }
+
+    public void turno() {
+
+        if (turno) {
+            // muestra el rojo un texto que dice q el jugador q es el proximo jugador 1
+            turnos.setText(jugador1);
+            turnos.setForeground(Color.red);
+            // en otro caso (si el turno es falso)
+        } else {
+            // muestra el azul un texto que dice q el jugador q es el proximo jugador 2
+            turnos.setText(jugador2);
+            turnos.setForeground(Color.blue);
+        }
+    }
