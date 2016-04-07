@@ -1,0 +1,110 @@
+			Universidad católica
+
+
+
+
+ Jonatán Araya Valverde
+
+
+
+Ingeniera en sistemas
+
+
+
+
+Andrés Jiménez
+
+
+
+
+San Carlos
+
+
+
+2016
+
+
+Tabla
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Resumen ejecutivo:
+Este escrito se verá los puntos clave de la investigación, en la cual se dio un problema el cual se debía de resolver en un tiempo determinado en el lenguaje de java NetBeans por lo tanto se hizo una investigación al respecto en la cual se ve el proceso por el cual se recorrió para solucionar dicho problema, se darán algunas conclusiones, recomendaciones y algunos problemas encontrados en el trayecto del proyecto
+
+
+Descripción
+En esta documentación se dará un punto de vista del trabajo más personal y más detallada del problema que se plantea realizar, se verán  también se verá la forma en la que se planea realizar, el desarrollo del a misma, el proceso que tomo realizarlo además las dificultades que fueron sucediendo en el camino y cuales se pudieron solucionar y cuales no
+Abstracto
+
+Objetivo General y objetivos específicos
+
+Objetivos Generales:
+
+Aprender más de Java grafico
+Mejorar mi lógica como programador en todo aspecto
+
+Objetivos específicos:
+Realizar un juego del gato en java grafico
+Mejorar la utilización de los objetos dentro de Java grafico
+Aumentar mi conocimiento general
+Introducción:
+	Este proyecto se realiza para mejorar la mi lógica como programador, sin contar que me gustan los juegos de programación, la idea principal de la realización del proyecto es aprender a utilizar Java grafico de una mejor manera, hay algunas cosas nuevas de pasar de consola a utilizar lo grafico como la programación interna de algunos objetos, los objetos en si, por ejemplo  los labels los botones etc.
+
+Desarrollo
+¿Qué es lo que hay que resolver?
+A la hora de realizar este juego del gato algunos de los problemas que veo son a la hora de rotar los turnos de los jugadores también algunas cosas sobre la lista de jugadores se ve algo tediosa aunque realizable,  sin contar que mi conocimiento en Java grafico no es muy fuerte y necesito desarrollar mi lógica para realizarlo mejor
+
+¿Cómo se va a resolver?
+Planeo resolver este problema con mi lógica y mis conocimientos que tengo en clases ya sean aprendidos en clase o fuera de las mismas, sin contar que conozco la funcionalidad del juego que debo de realizar 
+
+¿Análisis del problema?
+             En este caso he pensado que este juego que debo hacer se puede hacer de 2 maneras ya sea con Strings o con matrices, las 2 formas son viales aunque yo decidí hacerlos con Strings ya que conozco más la metodología de cómo funciona y además el relleno de matrices es más complejo aunque también lo domino bastante bien 
+	
+Análisis de solución:
+Resultados obtenidos:
+             El proyecto  programable en realidad no fue muy difícil hubo algunas dificultades para realizar los turnos y en gato en sí, sus validaciones y pequeñas cosas para que el gato funcione bien y estéticamente se vea también de una buena manera, por ej el color del tablero los cambios de color, el color en los nombres, en los turnos, los números de ganadas y perdidas con el tiempo todos se pudo implementar como se pidió 
+Conclusiones:
+              Se logró terminar el proyecto satisfactoriamente lo más importante es que se logró implementar todas las cosas que se pedían, además aumente mi lógica a la hora de programador java en general y eso es la idea de todo esto, hacer juegos siempre es divertido además tiene su grado de complejidad 
+Recomendaciones:
+              Cosas que aprendí de este  de este trabajo después de terminado es que definitivamente se puede hacer un código de muchas maneras y que todas funcionan, para otra persona que tenga q realizar este trabajo sería bueno que conozca al menos algo básico del juego gato y que también tenga un conocimiento decente de java  grafico para que no sea complicado realizarlo y tener la mente abierta así se aprende en esto
+Referencias Bibliográficas ó Bibliografía:
+David Ethenrider(2009) Java: Graphical User Interfaces - An Introduction to Java Programming,
+http://bookboon.com/es/an-introduction-to-java-programming-3-ebook#download
+
+Bitácora:
+28/3/2016:
+29/3/2016: 
+30/3/2016: 	
+31/3/2016: 	
+1/4/2016: 
+Cronograma de trabajo:  
+Tarea1:
+Tarea 2:
+Tarea3: 
+Tarea4:
+Tarea5;
