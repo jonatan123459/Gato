@@ -1,0 +1,989 @@
+package gato;
+// importes
+import java.awt.Color;
+import javax.swing.JOptionPane;
+/**
+ *
+ * @author Jonatan
+ */
+public class Tablero extends javax.swing.JFrame {
+    // variables de la parte grafica
+    public boolean ganador = false;
+    public int ganaj1, ganaj2;
+    public boolean turno = true;
+    Jugadores co = new Jugadores("jugador1", "jugador2");
+    String jugador1 = co.getJugador1();
+    String jugador2 = co.getJugador2();
+    public int empate = 1;
+    public boolean random = false;
+    // arreglo para mostrar el tablero en el juego nuevo
+    String tamano[] = new String[13];
+    /**
+     *
+     */
+    public Tablero() { // le da nombre a los jugadores y a al turno inicial
+        initComponents();
+        juga.setText(jugador1);
+        juga2.setText(jugador2);
+        turnos.setText(jugador1);
+        turnos.setForeground(Color.red);
+    }
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        menuBar1 = new java.awt.MenuBar();
+        menu1 = new java.awt.Menu();
+        menu2 = new java.awt.Menu();
+        menuBar2 = new java.awt.MenuBar();
+        menu3 = new java.awt.Menu();
+        menu4 = new java.awt.Menu();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jPopupMenu2 = new javax.swing.JPopupMenu();
+        jMenu2 = new javax.swing.JMenu();
+        button1 = new java.awt.Button();
+        sd = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        juga = new javax.swing.JLabel();
+        juga2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        turnos = new javax.swing.JLabel();
+        posicion4 = new javax.swing.JLabel();
+        posicion5 = new javax.swing.JLabel();
+        posicion6 = new javax.swing.JLabel();
+        posicion2 = new javax.swing.JLabel();
+        posicion3 = new javax.swing.JLabel();
+        posicion1 = new javax.swing.JLabel();
+        posicion8 = new javax.swing.JLabel();
+        posicion9 = new javax.swing.JLabel();
+        posicion7 = new javax.swing.JLabel();
+        contador = new javax.swing.JLabel();
+        contador2 = new javax.swing.JLabel();
+        con2 = new javax.swing.JLabel();
+        con1 = new javax.swing.JLabel();
+        pantalla = new java.awt.Label();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        salir1 = new javax.swing.JMenu();
+        nuevojuego1 = new javax.swing.JMenuItem();
+        juegoanterior1 = new javax.swing.JMenuItem();
+        estadisticas1 = new javax.swing.JMenuItem();
+        Menu2 = new javax.swing.JMenuItem();
+
+        jMenu1.setText("jMenu1");
+
+        jMenuItem1.setText("jMenuItem1");
+
+        menu1.setLabel("File");
+        menuBar1.add(menu1);
+
+        menu2.setLabel("Edit");
+        menuBar1.add(menu2);
+
+        menu3.setLabel("File");
+        menuBar2.add(menu3);
+
+        menu4.setLabel("Edit");
+        menuBar2.add(menu4);
+
+        jMenu2.setText("jMenu2");
+
+        button1.setLabel("button1");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        sd.setForeground(new java.awt.Color(0, 51, 51));
+        sd.setText("jugador 2");
+        sd.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 0, 51)));
+
+        jLabel2.setText("jugador1");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 0)));
+
+        juga.setForeground(new java.awt.Color(255, 0, 0));
+        juga.setBorder(new javax.swing.border.MatteBorder(null));
+
+        juga2.setForeground(new java.awt.Color(0, 0, 255));
+        juga2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel3.setText("turno de");
+
+        turnos.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 0)));
+
+        posicion4.setForeground(new java.awt.Color(0, 255, 0));
+        posicion4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        posicion4.setText("D");
+        posicion4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
+        posicion4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                posicion4MouseClicked(evt);
+            }
+        });
+
+        posicion5.setForeground(new java.awt.Color(0, 255, 0));
+        posicion5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        posicion5.setText("F");
+        posicion5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
+        posicion5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                posicion5MouseClicked(evt);
+            }
+        });
+
+        posicion6.setForeground(new java.awt.Color(0, 255, 0));
+        posicion6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        posicion6.setText("T");
+        posicion6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
+        posicion6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                posicion6MouseClicked(evt);
+            }
+        });
+
+        posicion2.setForeground(new java.awt.Color(0, 255, 0));
+        posicion2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        posicion2.setText("B");
+        posicion2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
+        posicion2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                posicion2MouseClicked(evt);
+            }
+        });
+
+        posicion3.setForeground(new java.awt.Color(0, 255, 0));
+        posicion3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        posicion3.setText("C");
+        posicion3.setToolTipText("");
+        posicion3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
+        posicion3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                posicion3MouseClicked(evt);
+            }
+        });
+
+        posicion1.setForeground(new java.awt.Color(0, 255, 0));
+        posicion1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        posicion1.setText("A");
+        posicion1.setToolTipText("");
+        posicion1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
+        posicion1.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        posicion1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                posicion1MouseClicked(evt);
+            }
+        });
+
+        posicion8.setForeground(new java.awt.Color(0, 255, 0));
+        posicion8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        posicion8.setText("S");
+        posicion8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
+        posicion8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                posicion8MouseClicked(evt);
+            }
+        });
+
+        posicion9.setForeground(new java.awt.Color(0, 255, 0));
+        posicion9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        posicion9.setText("W");
+        posicion9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
+        posicion9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                posicion9MouseClicked(evt);
+            }
+        });
+
+        posicion7.setForeground(new java.awt.Color(0, 255, 0));
+        posicion7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        posicion7.setText("R");
+        posicion7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 255)));
+        posicion7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                posicion7MouseClicked(evt);
+            }
+        });
+
+        con2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        con2.setText("0");
+
+        con1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        con1.setText("0");
+
+        salir1.setText("Opciones");
+
+        nuevojuego1.setText("Nuevo Juego");
+        nuevojuego1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nuevojuego1ActionPerformed(evt);
+            }
+        });
+        salir1.add(nuevojuego1);
+
+        juegoanterior1.setText("Juego anterior");
+        juegoanterior1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                juegoanterior1ActionPerformed(evt);
+            }
+        });
+        salir1.add(juegoanterior1);
+
+        estadisticas1.setText("Estadisticas");
+        estadisticas1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                estadisticas1ActionPerformed(evt);
+            }
+        });
+        salir1.add(estadisticas1);
+
+        Menu2.setText("Salir");
+        Menu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Menu2ActionPerformed(evt);
+            }
+        });
+        salir1.add(Menu2);
+
+        jMenuBar1.add(salir1);
+
+        setJMenuBar(jMenuBar1);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(posicion1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(posicion2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(posicion3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(posicion4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(posicion5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(posicion6, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(turnos, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(24, 24, 24)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(contador)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(con1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(contador2)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(con2, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGap(18, 18, 18))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(posicion7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(posicion8, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(posicion9, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(pantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(juga2, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(sd, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(juga, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap(16, Short.MAX_VALUE)
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(turnos, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(contador, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(con1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addComponent(juga, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(sd, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(contador2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(con2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(26, 26, 26))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(55, 55, 55)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(posicion1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(posicion2, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(posicion3, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(posicion4, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(posicion5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(posicion6, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(posicion7, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(posicion8, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(posicion9, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(juga2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(77, 77, 77))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(pantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57))))
+        );
+
+        pack();
+    }// </editor-fold>                        
+    private void posicion1MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        if (posicion1.getText().equals("A")) { //es la primera posicion 
+            if (turno) {
+                posicion1.setText("X"); // pone X si es jugador 1
+                posicion1.setForeground(Color.red);// le pone color
+                SeGano(); // trae el metodo SeGano
+                empate++;
+                turno = false;
+            } else {
+                posicion1.setText("O"); // pone O si es jugador2 
+                posicion1.setForeground(Color.blue); // le pone color
+                SeGano(); // trae el metodo Segano
+                empate++; 
+                turno = true;
+            }
+            turno();
+        } else {
+            JOptionPane.showMessageDialog(null, "la casilla esta ocupada\nintente con otra"); // cualquier otra cosa da error
+        }// TODO add your handling code here:
+    }                                      
+    private void posicion2MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        if (posicion2.getText().equals("B")) { // esta es la segunda posicion
+            if (turno) {
+                posicion2.setText("X"); // pone X si es el jugador 1 
+                posicion2.setForeground(Color.red); // y color color
+                SeGano(); // trae el metodo
+                empate++;
+                turno = false;
+            } else {
+                posicion2.setText("O"); // si es jugador 2 pone O
+                posicion2.setForeground(Color.blue); // pone de color azul
+                SeGano(); // trae el metodo
+                empate++;
+                turno = true;
+            }
+            turno();
+        } else {
+            JOptionPane.showMessageDialog(null, "la casilla esta ocupada\nintente con otra"); // cualquier otra cosa da error
+        }
+    }                                      
+    private void posicion3MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        if (posicion3.getText().equals("C")) { // tercera posicion 
+            if (turno) {
+                posicion3.setText("X"); // si  es el jugador 1 pone X
+                posicion3.setForeground(Color.red); // lo pone en rojo
+                SeGano(); // trae el metodo
+                empate++;
+                turno = false;
+            } else {
+                posicion3.setText("O"); // si es el jugador 2 pone O
+                posicion3.setForeground(Color.blue); // lo pone en azul
+                SeGano();
+                empate++;
+                turno = true;
+            }
+            turno();
+        } else {
+            JOptionPane.showMessageDialog(null, "la casilla esta ocupada\nintente con otra"); // cual cualquier otra cosa da error
+        }// TODO add your handling code here:
+    }                                      
+    private void posicion4MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        if (posicion4.getText().equals("D")) { // si es D en la cuarta posicion 
+            if (turno) {
+                posicion4.setText("X"); // si es el jugador 1 pone X 
+                posicion4.setForeground(Color.red); // color rojo 
+                SeGano(); // trae el metodo
+                empate++;
+                turno = false;
+            } else {
+                posicion4.setText("O"); // si es el jugador 2
+                posicion4.setForeground(Color.blue); // pone azul (la O) 
+                SeGano(); // trae el metodo
+                empate++;
+                turno = true;
+            }
+            turno();
+        } else {
+            JOptionPane.showMessageDialog(null, "la casilla esta ocupada\nintente con otra"); // otra cosa da el error
+        }// TODO add your handling code here:
+    }                                      
+
+    private void posicion5MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        if (posicion5.getText().equals("F")) { // si la posicion 5 es igual a F
+            if (turno) {
+                posicion5.setText("X"); // si es el jugador 1 pone X
+                posicion5.setForeground(Color.red); // le da color
+                SeGano(); // trae el metodo
+                empate++;
+                turno = false;
+            } else {
+                posicion5.setText("O"); // si es el jugador 2 pone la O
+                posicion5.setForeground(Color.blue); // le da color
+                SeGano(); // trae el metodo
+                empate++;
+                turno = true;
+            }
+            turno();
+        } else {
+            JOptionPane.showMessageDialog(null, "la casilla esta ocupada\nintente con otra"); // otra cosa da error
+        }// TODO add your handling code here:
+    }                                      
+
+    private void posicion6MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        if (posicion6.getText().equals("T")) { //  SI la posicion 6 es T
+            if (turno) {
+                posicion6.setText("X"); // si es el jugador 1  pone X 
+                posicion6.setForeground(Color.red); // le da color
+                SeGano(); // trae el metodo
+                empate++;
+                turno = false;
+            } else {
+                posicion6.setText("O"); // si es el jugador 2 pone O 
+                posicion6.setForeground(Color.blue); // da color 
+                SeGano(); //trae el metodo
+                empate++;
+                turno = true;
+            }
+            turno();
+        } else {
+            // cualquier otra cosa da error 
+            JOptionPane.showMessageDialog(null, "la casilla esta ocupada\nintente con otra");        // TODO add your handling code here:
+    }                                      
+    }
+    private void posicion7MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        if (posicion7.getText().equals("R")) { // si es R
+            if (turno) {
+                posicion7.setText("X"); // si es el jugador 1 pone  X
+                posicion7.setForeground(Color.red); // le da color
+                SeGano(); // trae el metodo
+                empate++;
+                turno = false;
+            } else {
+                posicion7.setText("O");// si es el jugador 2 pone O
+                posicion7.setForeground(Color.blue); // le da color 
+                SeGano(); // trae el metodo
+                empate++;
+                turno = true;
+            }
+            turno();
+        } else {
+            // cualquier otra cosa da error
+            JOptionPane.showMessageDialog(null, "la casilla esta ocupada\nintente con otra");        // TODO add your handling code here:
+    }                                      
+    }
+    private void posicion8MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        if (posicion8.getText().equals("S")) { // si es  S
+            if (turno) {
+                posicion8.setText("X"); // si es el jugador 1 pone X 
+                posicion8.setForeground(Color.red); // le da color 
+                SeGano(); // trae el metodo
+                empate++;
+                turno = false;
+            } else {
+                posicion8.setText("O"); // si es el jugador 2 pone O 
+                posicion8.setForeground(Color.blue); // le da color 
+                SeGano(); // metodo traido
+                empate++;
+                turno = true;
+            }
+            turno();
+        } else {
+            // cualquier cosa q  no sea eso da error 
+            JOptionPane.showMessageDialog(null, "la casilla esta ocupada\nintente con otra");        // TODO add your handling code here:
+    }                                      
+    }
+    private void posicion9MouseClicked(java.awt.event.MouseEvent evt) {                                       
+        if (posicion9.getText().equals("W")) { // si es W 
+            if (turno) {
+                posicion9.setText("X"); // si es el jugador 1 pone X
+                posicion9.setForeground(Color.red);// le da color 
+                SeGano(); // trae el metodo
+                empate++;
+                turno = false;
+            } else {
+                posicion9.setText("O");// si es el jugador2 pone O
+                posicion9.setForeground(Color.blue); // pone color 
+                SeGano();// meotodo traido
+                empate++;
+                turno = true;
+            }
+            turno();
+        } else {
+            // cualquier otra cosa da error
+            JOptionPane.showMessageDialog(null, "la casilla esta ocupada\nintente con otra");        // TODO add your handling code here:
+    }                                      
+    }
+    private void Menu2ActionPerformed(java.awt.event.ActionEvent evt) {                                      
+        JOptionPane.showMessageDialog(null, "Gracias por jugar");
+        if (!validarEmpate()) {
+            // muestro el resultado final y el ganador es el jugador1
+            JOptionPane.showMessageDialog(null, "Resultado final."
+                    + "\n" + jugador1 + ": " + con1.getText()
+                    + "\n" + jugador2 + ": " + con2.getText()
+                    + "\nFelicitaciones!! " + jugador1
+                    + "\neres el ganador");
+        } else {
+            // si no hubo empate el el resultado final y el turno falso
+            if (!validarEmpate()) {
+                // muestro el resultado final y el ganador es el jugador2
+                JOptionPane.showMessageDialog(null, "Resultado final."
+                        + "\n" + jugador1 + ": " + con1.getText()
+                        + "\n" + jugador2 + ": " + con2.getText()
+                        + "\nFelicitaciones !! " + jugador2
+                        + "\neres el ganador");
+            } else {
+                //en otro caso resultado final empate
+                JOptionPane.showMessageDialog(null, "Resultado final."
+                        + "\n" + jugador1 + ": " + con1.getText()
+                        + "\n" + jugador2 + ": " + con2.getText()
+                        + "\nEmpate !! ");
+            }
+        }
+        {
+            System.exit(0);
+        }       // sale del programa
+    }                                     
+    private void estadisticas1ActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        if (!validarEmpate()) {
+            // muestro el resultado final y el ganador es el jugador1
+            JOptionPane.showMessageDialog(null, "Resultado final."
+                    + "\n" + jugador1 + ": " + con1.getText()
+                    + "\n" + jugador2 + ": " + con2.getText()
+                    + "\nFelicitaciones!! " + jugador1
+                    + "\neres el ganador");
+        } else {
+            // si no hubo empate el el resultado final y el turno falso
+            if (!validarEmpate()) {
+                // muestro el resultado final y el ganador es el jugador2
+                JOptionPane.showMessageDialog(null, "Resultado final."
+                        + "\n" + jugador1 + ": " + con1.getText()
+                        + "\n" + jugador2 + ": " + con2.getText()
+                        + "\nFelicitaciones !! " + jugador2
+                        + "\neres el ganador");
+            } else {
+                //en otro caso resultado final empate
+                JOptionPane.showMessageDialog(null, "Resultado final."
+                        + "\n" + jugador1 + ": " + con1.getText()
+                        + "\n" + jugador2 + ": " + con2.getText()
+                        + "\nEmpate !! ");
+            }
+        }
+    }                                             
+    private void juegoanterior1ActionPerformed(java.awt.event.ActionEvent evt) {                                               
+        // aqui traigo al arreglo que declare arriba para guardar y mostrar el juego anterior
+        posicion1.setText(tamano[0]); //la parte del arreglo que esta
+        if (posicion1.getText().equals("A")) { // si es A
+            posicion1.setForeground(Color.green); // lo deja verde
+        } else if (posicion1.getText().equals("X")) { // si es X
+            posicion1.setForeground(Color.red); // lo pone rojo y la X
+        } else if (posicion1.getText().equals("O")) { // si es O 
+            posicion1.setForeground(Color.blue); // lo pone azul y deja la O
+        }
+        posicion2.setText(tamano[1]); // la parte del arreglo que esta
+        if (posicion2.getText().equals("B")) { // si es B
+            posicion2.setForeground(Color.green); // lo deja en verde
+        } else if (posicion2.getText().equals("X")) { // si es X
+            posicion2.setForeground(Color.red); // deja la X y la pone en rojo
+        } else if (posicion2.getText().equals("O")) { // si esta O
+            posicion2.setForeground(Color.blue);// deja el O y pone Azul
+        }
+        posicion3.setText(tamano[2]); // lugar del arreglo que esta
+        if (posicion3.getText().equals("C")) { // si es C
+            posicion3.setForeground(Color.green); // lo deja en verde
+        } else if (posicion3.getText().equals("X")) { // deja la X 
+            posicion3.setForeground(Color.red); // la pone en rojo la X
+        } else if (posicion3.getText().equals("O")) { // si es O
+            posicion3.setForeground(Color.blue); // lo pone en azul
+        }
+        posicion4.setText(tamano[3]); // posicion en el arreglo
+        if (posicion4.getText().equals("D")) { // si es D
+            posicion4.setForeground(Color.green); // lo pone en verde
+        } else if (posicion4.getText().equals("X")) { // si es X 
+            posicion4.setForeground(Color.red); // la pone en rojo
+        } else if (posicion4.getText().equals("O")) { // si es O
+            posicion4.setForeground(Color.blue); // la deja en azul
+        }
+        posicion5.setText(tamano[4]); // lugar del arreglo en q esta 
+        if (posicion5.getText().equals("F")) { // si es F
+            posicion5.setForeground(Color.green); // lo deja verde 
+        } else if (posicion5.getText().equals("X")) { // si es X 
+            posicion5.setForeground(Color.red); // la deja en rojo
+        } else if (posicion5.getText().equals("O")) { // si es O
+            posicion5.setForeground(Color.blue); // lo deja azul
+        }
+        posicion6.setText(tamano[5]); // el lugar del arreglo en donde esta
+        if (posicion6.getText().equals("T")) { // si es T
+            posicion6.setForeground(Color.green); // lo deja verde
+        } else if (posicion6.getText().equals("X")) { // si es X
+            posicion6.setForeground(Color.red); // la deja roja
+        } else if (posicion6.getText().equals("O")) {// si es O
+            posicion6.setForeground(Color.blue); //la deja azul
+        }
+        posicion7.setText(tamano[6]);// posicion en el arreglo que esta
+        if (posicion7.getText().equals("R")) { // si es R 
+            posicion7.setForeground(Color.green); // lo deja verde
+        } else if (posicion7.getText().equals("X")) { // si es X 
+            posicion7.setForeground(Color.red); // la deja en roja
+        } else if (posicion7.getText().equals("O")) { // si es O 
+            posicion7.setForeground(Color.blue); // la deja en azul
+        }
+        posicion8.setText(tamano[7]); // lugar en el arreglo que esta 
+        if (posicion8.getText().equals("S")) { // si es S
+            posicion8.setForeground(Color.green); // la deja en verde
+        } else if (posicion8.getText().equals("X")) { // si es X 
+            posicion8.setForeground(Color.red);// la deja en rojo
+        } else if (posicion8.getText().equals("O")) { // si es O 
+            posicion8.setForeground(Color.blue); // la deja en azul
+        }
+        posicion9.setText(tamano[8]); // lugar en el arreglo que esta 
+        if (posicion9.getText().equals("W")) { // si es W
+            posicion9.setForeground(Color.green); // la deja en verde
+        } else if (posicion9.getText().equals("X")) { // si es X
+            posicion9.setForeground(Color.red); // la deja en rojo
+        } else if (posicion9.getText().equals("O")) { // si es O 
+            posicion9.setForeground(Color.blue); // lo deja en azul
+        }
+        turnos.setText(tamano[9]); // regresa lo q tenia el turno
+        juga.setText(tamano[11]); // regresa el nombre del jugador
+        juga.setForeground(Color.red); // regresa el color del jugador
+        juga2.setText(tamano[12]); // toma el nombre del jugador 
+        juga2.setForeground(Color.blue); // regresa el color
+    }                                              
+    private void nuevojuego1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        tamano[0] = posicion1.getText(); // tomo cada uno por separado y lo meten el arreglo
+        tamano[1] = posicion2.getText();
+        tamano[2] = posicion3.getText();
+        tamano[3] = posicion4.getText();
+        tamano[4] = posicion5.getText();
+        tamano[5] = posicion6.getText();
+        tamano[6] = posicion7.getText();
+        tamano[7] = posicion8.getText();
+        tamano[8] = posicion9.getText();
+        tamano[9] = turnos.getText();
+        tamano[10] = pantalla.getText();
+        tamano[11] = juga.getText();
+        tamano[12] = juga2.getText();
+        LimpiarTablero(); // limpio el tablero
+        // Al darle juego nuevo guardo cada posicion para mostrarla despues con un arreglo
+    }                                           
+    /**
+     * @param args the command line arguments
+     */
+    public void SeGano() {
+        boolean gana = false;
+        {
+            if (posicion1.getText().equals(posicion2.getText()) && posicion1.getText().equals(posicion3.getText())) {
+                ganador();
+                // es verdadero que hubo un ganador
+                gana = true;
+            } else if (posicion1.getText().equals(posicion5.getText()) && posicion1.getText().equals(posicion9.getText())) {
+                ganador();
+                // es verdadero que hubo un ganador
+                gana = true;
+            } else if (posicion3.getText().equals(posicion5.getText()) && posicion3.getText().equals(posicion7.getText())) {
+                ganador();
+                // es verdadero que hubo un ganador
+                gana = true;
+            } else if (posicion4.getText().equals(posicion5.getText()) && posicion4.getText().equals(posicion6.getText())) {
+                ganador();
+                // es verdadero que hubo un ganador
+                gana = true;
+            } else if (posicion7.getText().equals(posicion8.getText()) && posicion7.getText().equals(posicion9.getText())) {
+                ganador();
+                // es verdadero que hubo un ganador
+                gana = true;
+            } else if (posicion1.getText().equals(posicion4.getText()) && posicion1.getText().equals(posicion7.getText())) {
+                ganador();
+                // es verdadero que hubo un ganador
+                gana = true;
+            } else if (posicion2.getText().equals(posicion5.getText()) && posicion2.getText().equals(posicion8.getText())) {
+                ganador();
+                // es verdadero que hubo un ganador
+                gana = true;
+            } else if (posicion3.getText().equals(posicion6.getText()) && posicion3.getText().equals(posicion9.getText())) {
+                ganador();
+                // es verdadero que hubo un ganador
+                gana = true;
+            }
+            if (turno) {
+                turno = false;
+            } else {
+                turno = true;
+            }
+            if (empate == 9 && gana == false) {
+                pantalla.setText("Hay empate!!!");
+                // empieza la nueva partida el jugador contraio al que la termino
+                if (turno) {
+                    turno = false;
+                } else {
+                    turno = true;
+                }
+                // pregunto si quieren jugar otra partida
+                int seleccion = JOptionPane.showConfirmDialog(null, "quieren jugar otra partida", "mensaje", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null);
+                if (seleccion == 0) {
+                    LimpiarTablero();
+                } else {
+                    // si no hubo empate el el resultado final y el turno es verdadero
+                    if (turno && !validarEmpate()) {
+                        // muestro el resultado final y el ganador es el jugador1
+                        JOptionPane.showMessageDialog(null, "Resultado final."
+                                + "\n" + jugador1 + ": " + con1.getText()
+                                + "\n" + jugador2 + ": " + con2.getText()
+                                + "\nFelicitaciones!! " + jugador1
+                                + "\neres el ganador");
+                    } else {
+                        // si no hubo empate el el resultado final y el turno falso
+                        if (!turno && !validarEmpate()) {
+                            // muestro el resultado final y el ganador es el jugador2
+                            JOptionPane.showMessageDialog(null, "Resultado final."
+                                    + "\n" + jugador1 + ": " + con1.getText()
+                                    + "\n" + jugador2 + ": " + con2.getText()
+                                    + "\nFelicitaciones !! " + jugador2
+                                    + "\neres el ganador");
+                        } else {
+                            //en otro caso resultado final empate
+                            JOptionPane.showMessageDialog(null, "Resultado final."
+                                    + "\n" + jugador1 + ": " + con1.getText()
+                                    + "\n" + jugador2 + ": " + con2.getText()
+                                    + "\nEmpate !! ");
+                        }
+                    }
+                    // intruciion que cierra aplicaciones
+                    System.exit(0);
+                }
+            }
+        }
+    }
+    public void turno() {
+        if (turno) {
+            // muestra el rojo un texto que dice q el jugador q es el proximo jugador 1
+            turnos.setText(jugador1);
+            turnos.setForeground(Color.red);
+            // en otro caso (si el turno es falso)
+        } else {
+            // muestra el azul un texto que dice q el jugador q es el proximo jugador 2
+            turnos.setText(jugador2);
+            turnos.setForeground(Color.blue);
+        }
+    }
+    public void ganador() {
+        int seleccion = 2; // para el JOptionPane.showConfirmDialog
+        // si hubo un ganador en turno verdadero (gano jugador 1)
+        if (turno) {
+            // muestro el nombre del jugador ganador en con el color de la ficah que le corresponde
+            pantalla.setForeground(Color.red);
+            pantalla.setText(jugador1 + " has Ganado FELICITACIONES!");
+            // aumento el puntaje del jugaor 1
+            ganaj1++;
+            //esta intruccion convierte numeros a String
+            //por q los jlabel solo aceptan string
+            //convieryo el resultado del jugador uno "ganaj1" en string y lo guardo en un String "auxganaj1"
+            String auxganaj1 = Integer.toString(ganaj1);
+            //muestro el resultado en el tablero con jlabel llmado r1
+            con1.setText(auxganaj1);
+            // pregunto si quieren jugar otra partida
+            seleccion = JOptionPane.showConfirmDialog(null, "quieren jugar otra partida", "mensaje", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null);
+            // en otro caso Si(ganador en posicion falso"ganador jugador 1")
+        } else {
+            // muestro el nombre del jugador ganador en con el color de la ficah que le corresponde
+            pantalla.setForeground(Color.blue);
+            pantalla.setText(jugador2 + " has Ganado FELICITACIONES!");
+            // aumento el puntaje del jugaor 1
+            ganaj2++;
+            //esta intruccion convierte numeros a String
+            //por q los jlabel solo aceptan string
+            //convieryo el resultado del jugador uno "ganaj1" en string y lo guardo en un String "auxganaj1"
+            String auxganaj2 = Integer.toString(ganaj2);
+            //muestro el resultado en el tablero con jlabel llmado r2
+            con2.setText(auxganaj2);
+            // pregunto si quieren jugar otra partida
+            seleccion = JOptionPane.showConfirmDialog(null, "quieren jugar otra partida", "mensaje", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null);
+        }
+        // si sellecion es 0
+        // quieren seguir jugando
+        if (seleccion == 0) {
+            // limpio el tablero
+            LimpiarTablero();
+            // en otro caso (si seleccion = 1)
+            // no quieren jugar mas
+        } else {
+            // muestro resultado final
+            if (turno && !validarEmpate()) {
+                JOptionPane.showMessageDialog(null, "Resultado final."
+                        + "\n" + jugador1 + ": " + con1.getText()
+                        + "\n" + jugador2 + ": " + con2.getText()
+                        + "\nFelicitaciones!! " + jugador1
+                        + "\neres el ganador");
+            } else {
+                if (!turno && !validarEmpate()) {
+                    JOptionPane.showMessageDialog(null, "Resultado final."
+                            + "\n" + jugador1 + ": " + con1.getText()
+                            + "\n" + jugador2 + ": " + con2.getText()
+                            + "\nFelicitaciones !! " + jugador2
+                            + "\neres el ganador");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Resultado final."
+                            + "\n" + jugador1 + ": " + con1.getText()
+                            + "\n" + jugador2 + ": " + con2.getText()
+                            + "\nEmpate !! ");
+                }
+            }
+            // cierro la aplicacion
+            System.exit(0);
+        }
+    }
+    public void LimpiarTablero() {
+        // limpio el jlabel que muestra en turno
+        turnos.setText("");
+        // cambioe el color a negro del jlabel que muestra el turno
+        // limpio las x y o por las letras y regreso el color 
+        posicion1.setText("A");
+        posicion2.setText("B");
+        posicion3.setText("C");
+        posicion4.setText("D");
+        posicion5.setText("F");
+        posicion6.setText("T");
+        posicion7.setText("R");
+        posicion8.setText("S");
+        posicion9.setText("W");
+        posicion1.setForeground(Color.green);
+        posicion2.setForeground(Color.green);
+        posicion3.setForeground(Color.green);
+        posicion4.setForeground(Color.green);
+        posicion5.setForeground(Color.green);
+        posicion6.setForeground(Color.green);
+        posicion7.setForeground(Color.green);
+        posicion8.setForeground(Color.green);
+        posicion9.setForeground(Color.green);
+        pantalla.setText(""); // se limpia la pantalla
+        empate = 0; // se reinicia empate
+    }
+    public boolean validarEmpate() {
+        // si el jalbel de los resultados r1 y r2 son iguales
+        // hay empate general de puntos
+        if (con1.getText().equals(con2.getText())) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    /*
+     public int random() {
+     int j = (int) (Math.random() * (6 - 0 + 1));
+     int o = (int) (Math.random() * (6 - 0 + 1));
+     if (j > o) {
+            
+     jugador3=co.getJugador1();
+            
+     } else if (o > j) {
+
+     jugador3=co.getJugador2();
+           
+     }
+     return Integer.parseInt(jugador3);  
+     }
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Tablero.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Tablero.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Tablero.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Tablero.class
+                    .getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Tablero().setVisible(true);
+            }
+        });
+    }
+    // Variables declaration - do not modify                     
+    private javax.swing.JMenuItem Menu2;
+    private java.awt.Button button1;
+    private javax.swing.JLabel con1;
+    private javax.swing.JLabel con2;
+    private javax.swing.JLabel contador;
+    private javax.swing.JLabel contador2;
+    private javax.swing.JMenuItem estadisticas1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JPopupMenu jPopupMenu2;
+    private javax.swing.JMenuItem juegoanterior1;
+    private javax.swing.JLabel juga;
+    private javax.swing.JLabel juga2;
+    private java.awt.Menu menu1;
+    private java.awt.Menu menu2;
+    private java.awt.Menu menu3;
+    private java.awt.Menu menu4;
+    private java.awt.MenuBar menuBar1;
+    private java.awt.MenuBar menuBar2;
+    private javax.swing.JMenuItem nuevojuego1;
+    private java.awt.Label pantalla;
+    private javax.swing.JLabel posicion1;
+    private javax.swing.JLabel posicion2;
+    private javax.swing.JLabel posicion3;
+    private javax.swing.JLabel posicion4;
+    private javax.swing.JLabel posicion5;
+    private javax.swing.JLabel posicion6;
+    private javax.swing.JLabel posicion7;
+    private javax.swing.JLabel posicion8;
+    private javax.swing.JLabel posicion9;
+    private javax.swing.JMenu salir1;
+    private javax.swing.JLabel sd;
+    private javax.swing.JLabel turnos;
+    // End of variables declaration                   
+}
